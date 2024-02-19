@@ -1,55 +1,32 @@
 {
-  "type": "VerticalLayout",
-  "elements": [
-    {
-      "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/due_date"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/description",
+  "type": "ListWithDetail",
+  "scope": "#/properties/weeks",
+  "options": {
+    "detail": {
+      "type": "VerticalLayout",
+      "scope": "#/properties/days",
       "options": {
-        "multi": true
+        "detail": {
+          "type": "VerticalLayout",
+          "elements": [
+            {
+              "type": "VerticalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/meal description",
+                  "label": "mAAAeal description"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/lastname",
+                  "label": "Last Name"
+                }
+              ]
+            }
+          ]
+        }
       }
     }
-  ]
+  }
 }
